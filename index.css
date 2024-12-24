@@ -61,15 +61,14 @@ nav > a:hover{
     background-size: cover;
     min-height: 100vh; 
     max-width: 1920px;
-    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #home > div.conteudo{
-    width: 700px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    flex: 0 1 700px;
 }
 
 #home div.conteudo h1{

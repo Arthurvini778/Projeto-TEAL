@@ -35,6 +35,7 @@ body{
 
 header{
     background-color: #000924;
+    height: 60px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -49,13 +50,43 @@ header > img{
     max-width: 80px;
 }
 
-div#menu > ul{
+div.menu-container > ul{
     padding: 15px;
     display: flex;
     flex-flow: row wrap;
     align-items: right;
     justify-content: right;
     list-style: none;
+}
+
+div.menu-container > button#menu-button{
+    background-color: white;
+    color: var(--cor1);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+div.menu-container > ul#menu-options{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+div.menu-container > ul#menu-options > li{
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
 }
 
 ul > li > a{
@@ -67,6 +98,7 @@ ul > li > a{
     margin-left: 10px;
     margin-right: 20px;   
     transition: all 0.3s; 
+    display: block;
 }
 
 ul > li > a:hover{

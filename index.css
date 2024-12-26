@@ -24,36 +24,99 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
     font-family: var(--fonte-padrao);
     font-size: 1em;
     font-weight: normal;
+    height: 100vh;
 }
 
-nav{
+header{
     background-color: #000924;
-    padding: 15px;
-    text-align: right;
+    height: 60px;
+    width: 100%;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.288);
     position: fixed;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > img{
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 80px;
+}
+
+div.menu-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: right;
+}
+
+div.menu-container > button#menu-button{
+    background-color: white;
+    font-size: 4px;
+    color: var(--cor1);
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+div.menu-container > ul#menu-options{
+    background-color: white;
+    width: 120px;
+    margin: 0px 10px 0px 0px;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    position: absolute;
+    transform: translateY(40px);
+
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+div.menu-container > ul#menu-options > li{
     width: 100%;
-    z-index: 1000;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-nav > a{
+ul#menu-options > li > a{
     font-family: var(--fonte-padrao);
+    color: var(--cor1);
+    text-align: center;
     text-decoration: none;
-    color: white;
-    padding: 10px 10px 15px 10px;
-    border-radius: 10px 10px 0px 0px;
-    margin-left: 10px;
-    margin-right: 20px;    
+    padding: 10px 0px;
+    width: 100%;
+    height: 100%;
+    
+    display: block;
+    
+    transition: all 0.3s; 
 }
 
-nav > a:hover{
-    background-image: linear-gradient(to bottom, #1f294698, transparent);
+ul#menu-options > li > a:hover{
+    background-color: #0009242d;
 }
 
 #home{
@@ -61,15 +124,15 @@ nav > a:hover{
     background-size: cover;
     min-height: 100vh; 
     max-width: 1920px;
-    position: relative;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #home > div.conteudo{
-    width: 700px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    flex: 0 1 700px;
 }
 
 #home div.conteudo h1{

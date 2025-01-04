@@ -1,1 +1,1 @@
-https://arthurvini778.github.io/TEAL/
+https://arthurvini778.github.io/projeto-TEAL/

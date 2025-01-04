@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+@import "variaveis";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $fonte-padrao;
+    font-size: 1em;
+    font-weight: normal;
+    height: 100vh;
+}
+
+#header{
+    background-color: transparent;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 80px;
+    }
+
+    .menu-container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: right;
+        
+        .menu-button{
+            background-color: white;
+            font-size: 4px;
+            color: $cor-principal;
+            margin-right: 15px;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 5px;
+            cursor: pointer;
+        }
+
+        .menu-options{
+            background-color: white;
+            width: 120px;
+            margin: 0px 10px 0px 0px;
+            padding: 0;
+            list-style: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        
+            position: absolute;
+            transform: translateY(40px);
+        
+            display: none;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+            li{
+                width: 100%;
+                
+                display: block;
+                
+                a{
+                    font-family: $fonte-padrao;
+                    color: $cor-principal;
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 10px 0px;
+                    width: 100%;
+                    height: 100%;
+                    
+                    display: block;
+                    
+                    transition: all 0.3s;
+
+                    &:hover{
+                        background-color: #0009242d;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#home{
+    background: url('../imagens/esc-full-t.jpg') center center no-repeat scroll;
+    background-size: cover;
+    min-height: 100vh; 
+    max-width: 1920px;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    .conteudo{
+        flex: 0 1 280px;
+
+        h1{
+            font-family: $fonte-titulo;
+            font-size: 2em;
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
+            color: $cor-principal;
+            margin-bottom: 35px;
+        }
+
+        hr{
+            background-color: $cor-principal;
+            height: 2px;
+            border: none;
+        }
+
+        h2{
+            color: $cor-principal;
+            font-family: $fonte-subtitulo;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 1.2em;
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
+            margin-top: 30px;
+        }
+
+    }
+}
+
+#sobre-nos{
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+    text-align: center;
+    
+    .valores{
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        gap: 15px;
+    
+        .valores__card{
+            background: conic-gradient(
+                from 0deg,
+                $cor-secundaria 0%,
+                $cor-principal 50%,    
+                $cor-secundaria 100%
+            );
+    
+            border-radius: 10px 0px;
+            
+            padding: 20px;
+            width: 220px;
+            height: 115px;
+            
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+    
+            h3{
+                font-family: $fonte-titulo;
+                font-size: 1.2em;
+                font-weight: 450;
+                color: white;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+    
+            p{
+                color: white;
+                font-family: $fonte-subtitulo;
+                font-size: 0.8em;
+                font-weight: 390;
+                width: 190px;
+            }
+    
+            &:hover{
+                transform: translateY(-5px);
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+#serviços{
+    background: conic-gradient(
+        from 0deg,
+        $cor-secundaria 0%,
+        $cor-secundaria 15%,  
+        $cor-principal 35%,
+        $cor-secundaria 80%
+    );
+    padding: 20px 30px;
+    text-align: center;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    h2{
+        color: white;
+    }
+
+    p{
+        color: white;
+    }
+
+    .icones{
+        width: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        gap: 1rem;
+
+        .icones__card{
+            background-color: white;
+            /*height: 180px;*/
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.315);
+
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+
+            .card__titulo{
+                width: 100%;
+                height: 60px;
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.377);
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                .button-conteudo{
+                    background-color: $cor-principal;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin-left: 15px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .material-symbols-outlined{
+                        color: white;
+                    }
+                }
+
+                h3{
+                    font-family: $fonte-titulo;
+                    font-size: 1.3em;
+                    font-weight: 685;
+                    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.26);
+                    margin-left: 15px;
+                }
+            }
+
+            .card__conteudo{
+                height: 120px;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    color: black;
+                    font-size: 1em;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+#contato{
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+    text-align: center;
+
+    h3{
+        color: $cor-principal;
+        font-family: $fonte-texto;
+        font-size: 1.5em;
+        font-style: italic;
+        text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.253);
+        padding-bottom: 20px;
+    }
+
+    form{
+        background-image: linear-gradient(to bottom, $cor-secundaria 0%, $cor-principal 50%);
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px 0px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.247);
+        margin: 0px auto;
+
+        .form-group{
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label{
+            color: white;
+            font-family: $fonte-padrao;
+            font-size: 1em;
+            margin-bottom: 8px;
+            
+            display: block;
+        }
+
+        input, textarea{
+            background-color: rgba(0, 0, 0, 0.315);
+            color: white;
+            font-family: $fonte-padrao;
+            font-size: 1em;
+            width: 95%;
+            padding: 12px;
+            border: 1px solid white;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        textarea{
+            resize: vertical;
+        }
+
+        button {
+            background-color: white; 
+            color: $cor-principal;
+            font-size: 1.2em;
+            font-weight: 550;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            
+            transition: background-color 0.3s;
+            cursor: pointer;
+        
+            &:hover {
+                background-color: #1a2f72;
+                color: white;
+            }
+        }
+    }
+
+    #inf{
+        margin-top: 30px;
+    }
+
+    .informaçoes{
+        background-image: linear-gradient(to bottom, $cor-secundaria 0%, $cor-principal 50%);
+        width: 90%;
+        padding: 15px;
+        border-radius: 10px 0px;
+        margin: auto;
+
+        ul{
+            list-style: inside;
+
+            li{
+                color: white;
+                font-size: .9em;
+                text-align: start;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.texto{
+    color: black;
+    line-height: 1.8;
+    width: 90%;
+    margin: 10px auto 20px auto;
+    
+    h2{
+        font-size: 1.7em;
+        font-family: $fonte-titulo;
+        text-align: center;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.342);
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-family: $fonte-subtitulo;
+        font-weight: normal;
+        text-indent: 20px;
+        text-align: justify;
+        margin-bottom: 5px;
+    }
+}
+
+#footer{
+    background-image: linear-gradient(to right, $cor-secundaria 0%, $cor-principal 50%);
+    color: white;
+    font-size: .9em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}

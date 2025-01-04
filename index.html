@@ -6,22 +6,22 @@
     
     <title>TEAL Empreendimentos</title>
 
-    <link rel="stylesheet" href="/estilos/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menuarrow_forward" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
 <body>
 
-    <header id="header">
+    <header>
        
-        <img src="imagens/freepik__background__15777.png" alt="Logo TEAL Empreendimentos" class="logo">
+        <img src="imagens/logo-teal-cortadav2-removebg-preview.png" alt="Logo TEAL Empreendimentos">
 
         <div class="menu-container">
 
-            <button class="menu-button">
+            <button id="menu-button" onclick="toggleMenu()">
                 <span class="material-symbols-outlined">menu</span>
             </button>
 
-            <ul class="menu-options">
+            <ul id="menu-options">
                 <li>
                     <a href="#home">Home</a>
                 </li>
@@ -29,7 +29,7 @@
                     <a href="#sobre-nos">Sobre nós</a>
                 </li>
                 <li>
-                    <a href="#serviços">Serviços</a>
+                    <a href="#servicos">Serviços</a>
                 </li>
                 <li>
                     <a href="#contato">Contato</a>
@@ -39,249 +39,231 @@
         
     </header>
     
-    <main id="main">   
+    <main>   
         
         <section id="home">
 
             <div class="conteudo">
                 <h1> 
-                    Soluções integradas para pessoas e negócios
+                    Transformando desafios financeiros em oportunidades de crescimento
                 </h1>
-                <hr>
                 <h2>
-                    Assessoria, Contabilidade e Construção Civil em um só lugar. Facilitamos sua jornada com expertise e compromisso com resultados
+                    Soluções personalizadas em contabilidade e assessoria empresarial para o sucesso do seu negócio
                 <h2>
             </div>
 
         </section>
 
         <section id="sobre-nos">
-                
-            <div class="texto">
+            
+            <div class="container">
                 
                 <h2> Quem Somos? </h2>
                 
-                <p>
-                    Com mais de 10 anos de experiência no mercado, 
-                    somos uma empresa dedicada a oferecer soluções 
-                    completas em assessoria e contabilidade, 
-                    simplificando a gestão financeira e promovendo 
-                    o crescimento sustentável de nossos clientes.  
-                </p>
-                
-                <p>
-                    Nosso time é formado por especialistas altamente capacitados, 
-                    comprometidos com a qualidade, 
-                    a transparência e o sucesso de cada parceiro. 
-                    Atendemos empresas de diversos segmentos, 
-                    sempre alinhando nossos serviços às constantes 
-                    mudanças da legislação e às necessidades 
-                    específicas de cada negócio.
-                </p>
-                
-            </div>
+                <div class="texto">
+                    
+                    <p>
+                        Com mais de 10 anos de experiência no mercado, 
+                        somos uma empresa dedicada a oferecer soluções 
+                        completas em assessoria e contabilidade, 
+                        simplificando a gestão financeira e promovendo 
+                        o crescimento sustentável de nossos clientes.  
+                    </p>
+                    
+                    <p>
+                        Nosso time é formado por especialistas altamente capacitados, 
+                        comprometidos com a qualidade, 
+                        a transparência e o sucesso de cada parceiro. 
+                        Atendemos empresas de diversos segmentos, 
+                        sempre alinhando nossos serviços às constantes 
+                        mudanças da legislação e às necessidades 
+                        específicas de cada negócio.
+                    </p>
+                    
+                </div>
 
-            <div class="valores">
-                
-                <div class="valores__card">
+                <div class="icones">
                     
-                    <h3>Excelência</h3>
-                    <p>
-                        Resultados que impulsionam negócios.
-                    </p>
+                    <div class="card">
+                        
+                        <h3>Excelência</h3>
+                        <p>
+                            Resultados que impulsionam negócios.
+                        </p>
+                        
+                    </div>
+                    
+                    <div class="card">
+                        
+                        <h3>Compromisso</h3>
+                        <p>
+                            Foco nas necessidades dos clientes.
+                        </p>
+                        
+                    </div>
+                    
+                    <div class="card">
+                        
+                        <h3>Ética</h3>
+                        <p>
+                            Transparência em todas as ações.
+                        </p>
+                        
+                    </div>
                     
                 </div>
-                
-                <div class="valores__card">
-                    
-                    <h3>Compromisso</h3>
-                    <p>
-                        Foco nas necessidades dos clientes.
-                    </p>
-                    
-                </div>
-                
-                <div class="valores__card">
-                    
-                    <h3>Ética</h3>
-                    <p>
-                        Transparência em todas as ações.
-                    </p>
-                    
-                </div>
-                
+            
             </div>
 
         </section>
         
-        <section id="serviços">
+        <section id="servicos">
+            
+            <div class="container">
 
-            <div class="texto">
                 <h2> Serviços </h2>
-            
-                <p>
-                Descubra como podemos ajudar sua empresa a se
-                destacar no mercado com soluções práticas e eficientes.
-                </p>
-            </div>
 
-            <div class="icones">
-
-                <div class="icones__card">
-
-                    <div class="card__titulo">
-
-                        <div class="button-conteudo">
-                            <span class="material-symbols-outlined icone-serviços">arrow_forward</span>
-                        </div>
-
-                        <h3> Assessoria </h3>
-
-                    </div>
-
-                    <div class="card__conteudo" id="conteudo1">
-                        <p>
-                            Gestão contábil completa para empresas de todos os portes,
-                            com foco em segurança e eficiência.
-                        </p>
-                    </div>
-
+                <div class="texto">
+                
+                    <p>
+                    Descubra como podemos ajudar sua empresa a se
+                    destacar no mercado com soluções práticas e eficientes.
+                    </p>
                 </div>
 
-                <div class="icones__card">
-     
-                    <div class="card__titulo">
+                <div class="icones">
 
-                        <div class="button-conteudo">
-                            <span class="material-symbols-outlined icone-serviços">arrow_forward</span>
-                        </div>
+                    
+                    <div class="card">
 
-                        <h3> Contabilidade </h3>
+                        <h3> Abertura de Empresas </h3>
+                        <p>
+                            Todo o suporte para começar seu negócio da forma certa.
+                        </p>
 
                     </div>
+                    
+                    <div class="card">
 
-                    <div class="card__conteudo" id="conteudo2">    
+                        <h3> Contabilidade Empresarial </h3>
                         <p>
-                            Gestão contábil completa para empresas de todos os portes,
+                            Gestão contábil completa para empresas de todos os portes, 
                             com foco em segurança e eficiência.
                         </p>
-                    </div>
-
-                </div>
-
-                <div class="icones__card">
-               
-                    <div class="card__titulo">
-
-                        <div class="button-conteudo">
-                            <span class="material-symbols-outlined icone-serviços">arrow_forward</span>
-                        </div>
-
-                        <h3> Construção Civil </h3>
 
                     </div>
+                    
+                    <div class="card">
 
-                    <div class="card__conteudo" id="conteudo3"> 
+                        <h3> Planejamento Tributário </h3>
                         <p>
-                            Gestão contábil completa para empresas de todos os portes,
-                            com foco em segurança e eficiência.
+                            Estratégias para reduzir custos fiscais e maximizar os lucros da sua empresa.
                         </p>
-                    </div>
-
-                </div>
-
-                <div class="icones__card">
-
-                    <div class="card__titulo">
-
-                        <div class="button-conteudo">
-                            <span class="material-symbols-outlined icone-serviços">arrow_forward</span>
-                        </div>
-
-                        <h3> Consultoria </h3>
 
                     </div>
+                    
+                    <div class="card">
 
-                    <div class="card__conteudo" id="conteudo4">  
+                        <h3> Assessoria Jurídica </h3>
                         <p>
-                            Gestão contábil completa para empresas de todos os portes,
-                            com foco em segurança e eficiência.
+                            Orientação legal e suporte para garantir conformidade em todos os aspectos do seu negócio.
                         </p>
+
                     </div>
 
+                    <div class="card">
+
+                        <h3> Planejamento Financeiro </h3>
+                        <p>
+                            Controle seu fluxo de caixa e otimize seus investimentos.
+                        </p>
+
+                    </div>
+                
                 </div>
-            
+
             </div>
 
         </section>
 
         <section id="contato">
 
-            <div class="texto">
+            <div class="container">
+
                 <h2>Entre em Contato</h2>
 
-                <p>
-                    Estamos aqui para ajudar! Preencha o formulário ou entre
-                    em contato pelos canais abaixo e tire suas dúvidas.
-                </p>
-            </div>
-    
-            <h3>Formulário:</h3>
+                <div class="texto">
+                    <p>
+                        Estamos aqui para ajudar! Preencha o formulário ou entre
+                        em contato pelos canais abaixo e tire suas dúvidas.
+                    </p>
+                </div>
 
-            <form>
+                <div class="form">
 
-                <div class="form-group">
+                    <h3>Formulário:</h3>
+                    <form>
 
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required placeholder="Seu nome">
+                        <div class="form-group">
+
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome">
+                            
+                        </div>
+                          
+                        <div class="form-group">
+                            
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+                            
+                        </div>
+                          
+                        <div class="form-group">
+                            
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Sua mensagem"></textarea>
+                        
+                        </div>
+                          
+                        <button type="submit" class="btn">Enviar</button>
+
+                    </form>
                     
                 </div>
-                    
-                <div class="form-group">
-                    
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="Seu e-mail">
-                    
-                </div>
-                    
-                <div class="form-group">
-                    
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Sua mensagem"></textarea>
                 
+                <div class="informacoes">
+                    
+                    <h3 id="inf">Informações de contato:</h3>
+                    
+                    <div id="block">
+                        <ul>
+                            <li>
+                            Endereço: Rua: Maria Neuraci de Souza Santos,
+                            781 - Mossoró, RN
+                        </li>
+                        <li>
+                            Telefone: (84) 8155-0408
+                        </li>
+                        <li> 
+                            Email: tealassessoria@gmail.com     
+                        </li>
+                    </ul>
+
                 </div>
                     
-                <button type="submit" class="btn">Enviar</button>
-
-            </form>
-            
-            <h3 id="inf">Informações de contato:</h3>
-            
-            <div class="informaçoes">
-                
-                <ul>
-                    <li>
-                        Endereço: Rua: Maria Neuraci de Souza Santos,
-                        781 - Mossoró, RN
-                    </li>
-                    <li>
-                        Telefone: (84) 8155-0408
-                    </li>
-                    <li> 
-                        Email: tealassessoria@gmail.com     
-                    </li>
-                </ul>
+                </div>
 
             </div>
 
         </section>
     </main>
 
-    <footer id="footer">
+    <footer>
         <p>
             &copy; Teal Assessoria. Todos os direitos reservados
         </p>
     </footer>
+
 
     <script src="index.js"></script>
           

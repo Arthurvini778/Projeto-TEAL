@@ -1,28 +1,42 @@
-let ButtonMenu = document.querySelector('.menu-button')
-let OptionsMenu = document.querySelector('.menu-options')
+let buttonMenu = document.querySelector('.menu-button');
 
-ButtonMenu.addEventListener("click", () => {
+buttonMenu.addEventListener("click", () => {
 
-    if(OptionsMenu.style.display === 'none'){
-        OptionsMenu.style.display = 'block'
+    let optionsMenu = document.querySelector('.menu-options');
+
+    let optionsMenuDisplay = window.getComputedStyle(optionsMenu).display;
+
+    if(optionsMenuDisplay === 'none'){
+
+        optionsMenu.style.display = 'block'
     }
 
     else{
-        OptionsMenu.style.display = 'none'
+        optionsMenu.style.display = 'none'
     }
 })
 
-let ButtonService = document.querySelectorAll('.button-conteudo');
-let ConteudoService = document.querySelectorAll('.card__conteudo');
-let Arrow = document.querySelectorAll('.icone-serviços')
+let buttons = document.querySelectorAll('.button-conteudo');
 
+buttons.forEach((button, index) => {
+    
+    button.addEventListener("click", () => {
+        
+        let arrow = button.querySelector('.icone-serviços');
+        let conteudo = document.querySelector(`#conteudo${index + 1}`);
 
-ButtonService.forEach((.button-conteudo, index) => {
+        let conteudoDisplay = window.getComputedStyle(conteudo).display;
 
-    let rotation = 0;
+        if (conteudoDisplay === 'none' || conteudoDisplay === '') {
 
-    span.addEventListener("click", () => {
-        rotation += 90;
-        Arrow[index].style.transform `rotate(${rotation}deg)`
+            conteudo.style.display = 'flex'; 
+            arrow.style.transform = 'rotate(90deg)'; 
+        } 
+        
+        else {
+            
+            conteudo.style.display = 'none'; 
+            arrow.style.transform = 'rotate(0deg)'; 
+        }
     });
 });

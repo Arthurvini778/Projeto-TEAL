@@ -33,6 +33,7 @@ body{
         margin-top: 10px;
         margin-bottom: 10px;
         max-width: 80px;
+        cursor: pointer;
     }
 
     .menu-container{
@@ -41,6 +42,7 @@ body{
         justify-content: right;
         
         .menu-button{
+
             background-color: white;
             font-size: 4px;
             color: $cor-principal;
@@ -49,21 +51,28 @@ body{
             border-radius: 5px;
             padding: 5px 5px;
             cursor: pointer;
-
+            
             &:hover{
                 background-color: #d9d9d9;
+            }
+
+            .material-icons-outlined{
+                color: $cor-principal;
             }
         }
 
         .menu-options{
             background-color: white;
+
             width: 120px;
             margin: 0px 10px 0px 0px;
             padding: 0;
+
             list-style: none;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 10px 0px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
             overflow: hidden;
         
             position: absolute;
@@ -97,6 +106,10 @@ body{
                         background-color: #0009242d;
                     }
                 }
+
+                .icone-menu{
+                    display: none;
+                }
             }
         }
     }
@@ -114,31 +127,40 @@ body{
     align-items: center;
 
     .conteudo{
-        flex: 0 1 280px;
+        flex: 1 1 280px;
+        max-width: 280px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
 
         h1{
+            color: black;
             font-family: $fonte-titulo;
-            font-size: 2em;
+            font-size: 1.8em;
             text-align: center;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
-            color: $cor-principal;
+            width: 255px;
             margin-bottom: 35px;
         }
 
         hr{
-            background-color: $cor-principal;
+            background-color: black;
+            width: 235px;
             height: 2px;
             border: none;
         }
 
         h2{
-            color: $cor-principal;
+            color: black;
             font-family: $fonte-subtitulo;
             font-style: italic;
             font-weight: normal;
-            font-size: 1.2em;
+            font-size: 1em;
             text-align: center;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
+            width: 235px;
             margin-top: 30px;
         }
 
@@ -210,7 +232,7 @@ body{
         $cor-secundaria 15%,  
         $cor-principal 35%,
         $cor-secundaria 80%
-    );
+        );
     padding: 20px 30px;
     text-align: center;
 
@@ -221,38 +243,40 @@ body{
     h2{
         color: white;
     }
-
+    
     p{
         color: white;
     }
-
+    
     .icones{
-        width: 90%;
+        width: 100%;
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: row wrap;
         justify-content: center;
         gap: 1rem;
-
+        
         .icones__card{
             background-color: white;
-            /*height: 180px;*/
-            width: 100%;
+            height: fit-content;
+            width: 350px;
             border-radius: 10px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.315);
 
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: column nowrap;
+            justify-content: center;
             align-items: center;
-
+            
             .card__titulo{
+                
                 width: 100%;
                 height: 60px;
                 box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.377);
-
+                
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-
+                
                 .button-conteudo{
                     background-color: $cor-principal;
                     width: 30px;
@@ -267,11 +291,11 @@ body{
                     justify-content: center;
                     align-items: center;
 
-                    .material-symbols-outlined{
+                    .material-icons-outlined{
                         color: white;
                     }
                 }
-
+                
                 h3{
                     font-family: $fonte-titulo;
                     font-size: 1.3em;
@@ -280,7 +304,7 @@ body{
                     margin-left: 15px;
                 }
             }
-
+            
             .card__conteudo{
                 height: 120px;
                 width: 100%;
@@ -288,7 +312,7 @@ body{
                 display: none;
                 justify-content: center;
                 align-items: center;
-
+                
                 p{
                     color: black;
                     font-size: 1em;
@@ -312,7 +336,7 @@ body{
         text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.253);
         padding-bottom: 20px;
     }
-
+    
     form{
         background-image: linear-gradient(to bottom, $cor-secundaria 0%, $cor-principal 50%);
         width: 90%;
@@ -320,7 +344,7 @@ body{
         border-radius: 10px 0px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.247);
         margin: 0px auto;
-
+        
         .form-group{
             margin-bottom: 20px;
             text-align: left;
@@ -350,7 +374,7 @@ body{
         textarea{
             resize: vertical;
         }
-
+        
         button {
             background-color: white; 
             color: $cor-principal;

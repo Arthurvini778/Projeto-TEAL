@@ -1,8 +1,8 @@
 let buttonMenu = document.querySelector('.menu-button');
+let optionsMenu = document.querySelector('.menu-options');
 
 buttonMenu.addEventListener("click", () => {
 
-    let optionsMenu = document.querySelector('.menu-options');
 
     let optionsMenuDisplay = window.getComputedStyle(optionsMenu).display;
 
@@ -15,6 +15,14 @@ buttonMenu.addEventListener("click", () => {
         optionsMenu.style.display = 'none'
     }
 })
+
+document.addEventListener("click", (event) => {
+
+    if (!buttonMenu.contains(event.target) && !optionsMenu.contains(event.target)) {
+        
+      optionsMenu.style.display = "none";
+    }
+  });
 
 let buttons = document.querySelectorAll('.button-conteudo');
 

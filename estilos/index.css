@@ -32,6 +32,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   max-width: 80px;
+  cursor: pointer;
 }
 #header .menu-container {
   display: flex;
@@ -51,6 +52,9 @@ body {
 #header .menu-container .menu-button:hover {
   background-color: #d9d9d9;
 }
+#header .menu-container .menu-button .material-icons-outlined {
+  color: #000924;
+}
 #header .menu-container .menu-options {
   background-color: white;
   width: 120px;
@@ -58,7 +62,7 @@ body {
   padding: 0;
   list-style: none;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px 0px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: absolute;
@@ -87,6 +91,9 @@ body {
 #header .menu-container .menu-options li a:hover {
   background-color: rgba(0, 9, 36, 0.1764705882);
 }
+#header .menu-container .menu-options li .icone-menu {
+  display: none;
+}
 
 #home {
   background: url("../imagens/esc-full-t.jpg") center center no-repeat scroll;
@@ -99,29 +106,37 @@ body {
   align-items: center;
 }
 #home .conteudo {
-  flex: 0 1 280px;
+  flex: 1 1 280px;
+  max-width: 280px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 #home .conteudo h1 {
+  color: black;
   font-family: "Playfair Display", serif;
-  font-size: 2em;
+  font-size: 1.8em;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
-  color: #000924;
+  width: 255px;
   margin-bottom: 35px;
 }
 #home .conteudo hr {
-  background-color: #000924;
+  background-color: black;
+  width: 235px;
   height: 2px;
   border: none;
 }
 #home .conteudo h2 {
-  color: #000924;
+  color: black;
   font-family: "Roboto", sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
+  width: 235px;
   margin-top: 30px;
 }
 
@@ -184,20 +199,22 @@ body {
   color: white;
 }
 #serviços .icones {
-  width: 90%;
+  width: 100%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   gap: 1rem;
 }
 #serviços .icones .icones__card {
   background-color: white;
-  /*height: 180px;*/
-  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 350px;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.315);
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 }
 #serviços .icones .icones__card .card__titulo {
@@ -221,7 +238,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#serviços .icones .icones__card .card__titulo .button-conteudo .material-symbols-outlined {
+#serviços .icones .icones__card .card__titulo .button-conteudo .material-icons-outlined {
   color: white;
 }
 #serviços .icones .icones__card .card__titulo h3 {
